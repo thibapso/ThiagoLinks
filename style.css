@@ -12,6 +12,8 @@
   --surface-color-hover: rgba(255, 255, 255, 0.05);
   --highlight-color: rgba(255, 255, 255, 0.2);
   --switch-bg-url: url(./assets/moon-stars.svg);
+  --selection-color: #ffffff;
+  --selection-background: #6464A0;
 }
 
 .light {
@@ -22,6 +24,13 @@
   --surface-color-hover: rgba(0, 0, 0, 0.05);
   --highlight-color: rgba(0, 0, 0, 0.2);
   --switch-bg-url: url(./assets/sun.svg);
+  --selection-color: #000000;
+  --selection-background: #D775C4;
+}
+
+::selection {
+  color: var(--selection-color);
+  background-color: var(--selection-background);
 }
 
 body {
@@ -78,11 +87,11 @@ body * {
   z-index: 1;
   transform: translateY(-50%);
 
-  animation: slide-back 0.2s;
+  animation: slide-back 0.4s;
 }
 
 .light #switch button {
-  animation: slide-in 0.2s forwards;
+  animation: slide-in 0.4s forwards;
 }
 
 #switch button:hover {
